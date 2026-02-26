@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubh Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e9f5ec, #ffffff);
+        }
+
+        /* ================= NAVBAR ================= */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 80px;
+            background: #1d4019;
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f3ff85;
+        }
+
+        .hire-btn {
+            padding: 10px 22px;
+            border: none;
+            background: #00ff88;
+            color: black;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .hire-btn:hover {
+            background: #00cc66;
+            transform: scale(1.08);
+            box-shadow: 0 0 12px #00ff88;
+        }
+
+        /* ================= HERO ================= */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 80px;
+        }
+
+        .left {
+            max-width: 600px;
+        }
+
+        .left h1 {
+            font-size: 55px;
+            text-shadow: 0 0 15px rgba(29, 64, 25, 0.3);
+        }
+
+        #element {
+            color: #1d4019;
+        }
+
+        .intro {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .right img {
+            width: 420px;
+            max-width: 100%;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* ================= SKILLS ================= */
+        .skills {
+            padding: 80px;
+            text-align: center;
+        }
+
+        .skills h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .skill-box {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .skill-box div {
+            background: #1d4019;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .skill-box div:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1d4019;
+            color: white;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media(max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px;
+            }
+
+            .right {
+                margin-top: 40px;
+            }
+
+            .navbar {
+                padding: 20px 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">SHUBH's Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="site.html">Home</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="#">About</a></li>
+            <li><button class="hire-btn" onclick="openDiscord()">Hire Me</button></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="left">
+            <h1>Hello, I'm <span id="element"></span></h1>
+            <p class="intro">
+                I build modern websites, Discord bots and creative digital projects.
+                I love turning ideas into real experiences.
+            </p>
+        </div>
+
+        <div class="right">
+            <img src="Developer-removebg-preview.png" alt="Developer">
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2>My Skills</h2>
+        <div class="skill-box">
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>JavaScript</div>
+            <div>Discord Bot Dev</div>
+            <div>UI Design</div>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Shubh Portfolio
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        function openDiscord() {
+            window.open("https://discord.gg/YOUR_INVITE_LINK", "_blank");
+        }
+
+        var typed = new Typed("#element", {
+            strings: [
+                "Discord Bot Developer 👑",
+                "Web Developer 💻",
+                "Creative Builder 🚀"
+            ],
+            typeSpeed: 40,
+            backSpeed: 30,
+            loop: true
+        });
+    </script>
+
+</body>
+
+</html>
